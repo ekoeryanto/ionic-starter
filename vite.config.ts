@@ -17,6 +17,7 @@ import Mkcert from 'vite-plugin-mkcert'
 export default defineConfig({
   server: {
     https: false,
+    open: false,
   },
   plugins: [
     Mkcert({ force: false }),
