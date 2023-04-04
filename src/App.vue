@@ -3,6 +3,6 @@
 
 <template>
   <IonApp>
-    <IonRouterOutlet />
+    <IonRouterOutlet content-id="root-content" />
   </IonApp>
 </template>

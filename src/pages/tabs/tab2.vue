@@ -14,7 +14,7 @@ import { menuOutline } from 'ionicons/icons'
       <IonToolbar>
         <IonTitle>Tab 2</IonTitle>
         <IonButtons slot="end">
-          <IonButton router-link="/menu/Inbox">
+          <IonButton href="/menu">
             <IonIcon :icon="menuOutline" />
           </IonButton>
         </IonButtons>

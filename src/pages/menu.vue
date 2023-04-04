@@ -5,7 +5,9 @@ name: menu
 </route>
 
 <script setup lang="ts">
-defineProps<{ id: string }>()
+import { useRouteQuery } from '@vueuse/router'
+
+const page = useRouteQuery('page', 'Inbox')
 </script>
 
 <template>
@@ -15,7 +17,7 @@ defineProps<{ id: string }>()
         <IonButtons slot="start">
           <IonMenuButton />
         </IonButtons>
-        <IonTitle>{{ $props.id }}</IonTitle>
+        <IonTitle>{{ page }}</IonTitle>
       </IonToolbar>
     </IonHeader>
 
@@ -23,12 +25,12 @@ defineProps<{ id: string }>()
       <IonHeader collapse="condense">
         <IonToolbar>
           <IonTitle size="large">
-            {{ $props.id }}
+            {{ page }}
           </IonTitle>
         </IonToolbar>
       </IonHeader>
 
-      <ExploreContainer :name="$props.id" />
+      <ExploreContainer :name="page" />
     </IonContent>
   </IonPage>
 </template>

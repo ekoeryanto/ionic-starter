@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import { useRouteQuery } from '@vueuse/router'
 import {
   archiveOutline,
   archiveSharp,
@@ -20,46 +21,48 @@ const selectedIndex = ref(0)
 const appPages = [
   {
     title: 'Inbox',
-    url: '/menu/Inbox',
+    url: '/menu?page=Inbox',
     iosIcon: mailOutline,
     mdIcon: mailSharp,
   },
   {
     title: 'Outbox',
-    url: '/menu/Outbox',
+    url: '/menu?page=Outbox',
     iosIcon: paperPlaneOutline,
     mdIcon: paperPlaneSharp,
   },
   {
     title: 'Favorites',
-    url: '/menu/Favorites',
+    url: '/menu?page=Favorites',
     iosIcon: heartOutline,
     mdIcon: heartSharp,
   },
   {
     title: 'Archived',
-    url: '/menu/Archived',
+    url: '/menu?page=Archived',
     iosIcon: archiveOutline,
     mdIcon: archiveSharp,
   },
   {
     title: 'Trash',
-    url: '/menu/Trash',
+    url: '/menu?page=Trash',
     iosIcon: trashOutline,
     mdIcon: trashSharp,
   },
   {
     title: 'Spam',
-    url: '/menu/Spam',
+    url: '/menu?page=Spam',
     iosIcon: warningOutline,
     mdIcon: warningSharp,
   },
 ]
 const labels = ['Family', 'Friends', 'Notes', 'Work', 'Travel', 'Reminders']
 
-const path = window.location.pathname.split('folder/')[1]
-if (path !== undefined)
-  selectedIndex.value = appPages.findIndex(page => page.title.toLowerCase() === path.toLowerCase())
+const selected = useRouteQuery('page', 'Inbox')
+
+// const path = window.location.pathname.split('menu/')[1]
+// if (path !== undefined)
+selectedIndex.value = appPages.findIndex(page => page.title.toLowerCase() === selected.value.toLowerCase())
 </script>
 
 <template>
