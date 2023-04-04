@@ -11,7 +11,7 @@
     "preview": "vite preview",
     "test:e2e": "cypress run",
     "test:unit": "vitest",
-    "lint": "eslint",
+    "lint": "eslint --cache .",
     "postinstall": "simple-git-hooks"
   },
   "dependencies": {
@@ -79,6 +79,6 @@
     "pre-commit": "pnpm lint-staged"
   },
   "lint-staged": {
-    "*": "eslint --fix"
+    "*": "eslint --fix --cache"
   }
 }
