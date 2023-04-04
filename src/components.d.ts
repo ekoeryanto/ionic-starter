@@ -9,6 +9,7 @@ export {}
 
 declare module '@vue/runtime-core' {
   export interface GlobalComponents {
+    AppIcon: typeof import('./components/AppIcon.vue')['default']
     ExploreContainer: typeof import('./components/ExploreContainer.vue')['default']
     IonButton: typeof import('@ionic/vue')['IonButton']
     IonButtons: typeof import('@ionic/vue')['IonButtons']

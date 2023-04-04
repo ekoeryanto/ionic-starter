@@ -25,7 +25,6 @@
     "@ionic/vue-router": "^7.0.0",
     "@vueuse/core": "^9.13.0",
     "@vueuse/head": "^1.1.23",
-    "ionicons": "^7.0.0",
     "pinia": "^2.0.33",
     "vue": "^3.2.45",
     "vue-router": "^4.1.6"
@@ -46,6 +45,7 @@
     "cypress": "^12.9.0",
     "eslint": "^8.37.0",
     "eslint-plugin-cypress": "^2.13.2",
+    "ionicons": "^7.0.0",
     "jsdom": "^21.1.1",
     "lint-staged": "^13.2.0",
     "markdown-it-link-attributes": "^4.0.1",
