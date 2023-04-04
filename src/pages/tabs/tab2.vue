@@ -5,6 +5,7 @@ name: tab2
 </route>
 
 <script setup lang="ts">
+import { menuOutline } from 'ionicons/icons'
 </script>
 
 <template>
@@ -12,6 +13,11 @@ name: tab2
     <IonHeader>
       <IonToolbar>
         <IonTitle>Tab 2</IonTitle>
+        <IonButtons slot="end">
+          <IonButton router-link="/menu/Inbox">
+            <IonIcon :icon="menuOutline" />
+          </IonButton>
+        </IonButtons>
       </IonToolbar>
     </IonHeader>
     <IonContent :fullscreen="true">
