@@ -1,9 +1,17 @@
 lockfileVersion: '6.0'
 
+patchedDependencies:
+  '@ionic/pwa-elements@3.1.1':
+    hash: br64mufz353cfow4qbc6wnjg2q
+    path: patches/@ionic__pwa-elements@3.1.1.patch
+
 dependencies:
   '@capacitor/app':
     specifier: 4.1.1
     version: 4.1.1(@capacitor/core@4.7.3)
+  '@capacitor/camera':
+    specifier: ^4.1.4
+    version: 4.1.4(@capacitor/core@4.7.3)
   '@capacitor/core':
     specifier: 4.7.3
     version: 4.7.3
@@ -16,6 +24,9 @@ dependencies:
   '@capacitor/status-bar':
     specifier: 4.1.1
     version: 4.1.1(@capacitor/core@4.7.3)
+  '@ionic/pwa-elements':
+    specifier: ^3.1.1
+    version: 3.1.1(patch_hash=br64mufz353cfow4qbc6wnjg2q)
   '@ionic/vue':
     specifier: ^7.0.0
     version: 7.0.0
@@ -1466,6 +1477,14 @@ packages:
       - typescript
     dev: true
 
+  /@capacitor/camera@4.1.4(@capacitor/core@4.7.3):
+    resolution: {integrity: sha512-7f4n7PlnstYsdGyxc0Kc4hIyS6csFLOjXvffm7pJsuy9pSo+kfdOPdYgGg360QwbUAmA+Yv+J1ZW1eFIwgvWrQ==}
+    peerDependencies:
+      '@capacitor/core': ^4.0.0
+    dependencies:
+      '@capacitor/core': 4.7.3
+    dev: false
+
   /@capacitor/cli@3.9.0:
     resolution: {integrity: sha512-NkbVZhYb0oPdh/XArE2ZmOwPFJbla5meShGhv3DxKCXeKn1rt92ile+2xOgtB/j+mL7f9cqQzTQM/11sGQzMAg==}
     engines: {node: '>=12.4.0'}
@@ -1893,6 +1912,11 @@ packages:
       ionicons: 7.1.0
       tslib: 2.5.0
     dev: false
+
+  /@ionic/pwa-elements@3.1.1(patch_hash=br64mufz353cfow4qbc6wnjg2q):
+    resolution: {integrity: sha512-BoEX1pSrKn5dP4VQwaf8DweAmT4ynmpW+9f6oj/W1xLe54bmuXcUY07ziuZX1DLu50xHSYcO5qJ/dbYC/w6wgA==}
+    dev: false
+    patched: true
 
   /@ionic/utils-array@2.1.6:
     resolution: {integrity: sha512-0JZ1Zkp3wURnv8oq6Qt7fMPo5MpjbLoUoa9Bu2Q4PJuSDWM8H8gwF3dQO7VTeUj3/0o1IB1wGkFWZZYgUXZMUg==}

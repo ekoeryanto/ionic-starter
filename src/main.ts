@@ -1,4 +1,6 @@
 import { createApp } from 'vue'
+import { defineCustomElements as pwaElements } from '@ionic/pwa-elements/loader'
+
 import App from './App.vue'
 import { router } from './router'
 import { store } from './stores'
@@ -14,4 +16,5 @@ Promise.all(
   .then(() => router.isReady())
   .then(() => {
     app.mount('#app')
+    pwaElements(window)
   })
