@@ -28,11 +28,11 @@ dependencies:
     specifier: ^3.1.1
     version: 3.1.1(patch_hash=br64mufz353cfow4qbc6wnjg2q)
   '@ionic/vue':
-    specifier: ^7.0.0
-    version: 7.0.0
+    specifier: ^7.0.1
+    version: 7.0.1
   '@ionic/vue-router':
-    specifier: ^7.0.0
-    version: 7.0.0
+    specifier: ^7.0.1
+    version: 7.0.1
   '@vueuse/core':
     specifier: ^9.13.0
     version: 9.13.0(vue@3.2.47)
@@ -1981,8 +1981,8 @@ packages:
       - supports-color
     dev: true
 
-  /@ionic/core@7.0.0:
-    resolution: {integrity: sha512-pM8qOaea9ZbqZbGnoIswaeeTiHJKNQ9ziSNHSILDpdd4FjpxZjOeMgNUdvYzh5rX9fA6hEM2wodg7McIWHgvZQ==}
+  /@ionic/core@7.0.1:
+    resolution: {integrity: sha512-RK69pJ+2e5gLM4eASR2vccPQibIz+Lsc1uHql61lV8Xghb7+usYdeSXUvmn2JL3hkbSMt6JxKCTLfQjFJc+d8Q==}
     dependencies:
       '@stencil/core': 3.2.0
       ionicons: 7.1.0
@@ -2093,16 +2093,16 @@ packages:
       - supports-color
     dev: true
 
-  /@ionic/vue-router@7.0.0:
-    resolution: {integrity: sha512-OFm1lRFQ2rkrjdtjWBsUfsRa6b/FZ+1jez8gLfS2z/nM8yw5MFW7vnfPWgLHBGwWtQ++6MYpiSkybc7XQk4Kbw==}
+  /@ionic/vue-router@7.0.1:
+    resolution: {integrity: sha512-eSJjb1tjUpXuE7uLg2SOvornBdAVeZbCUVWX15nlCpyE6CbVn7D7Vq+D4BiBJRCaT66Nhzjw9Qpmfz8Lmze/xw==}
     dependencies:
-      '@ionic/vue': 7.0.0
+      '@ionic/vue': 7.0.1
     dev: false
 
-  /@ionic/vue@7.0.0:
-    resolution: {integrity: sha512-bikmbUm59EIciZS/Xdm3dhcoeg3PpoiFHl5YsgaydgiZccV7Hu9y7n5zT1ydIPYnJryb2gRaNQ4N8O4JvDll8w==}
+  /@ionic/vue@7.0.1:
+    resolution: {integrity: sha512-5z3yd5y9lpq4NmPdOCM5rv+ltMwnMl3scCjTYjySsbi5tdq72VO0sk18QOc7xXkcxBRelUQbrCXG8q3Env4z7Q==}
     dependencies:
-      '@ionic/core': 7.0.0
+      '@ionic/core': 7.0.1
       ionicons: 7.1.0
     dev: false
 
@@ -4108,7 +4108,7 @@ packages:
     hasBin: true
     dependencies:
       caniuse-lite: 1.0.30001474
-      electron-to-chromium: 1.4.350
+      electron-to-chromium: 1.4.352
       node-releases: 2.0.10
       update-browserslist-db: 1.0.10(browserslist@4.21.5)
     dev: true
@@ -4659,6 +4659,10 @@ packages:
     resolution: {integrity: sha512-3lqz5YjWTYnW6dlDa5TLaTCcShfar1e40rmcJVwCBJC6mWlFuj0eCHIElmG1g5kyuJ/GD+8Wn4FFCcz4gJPfaQ==}
     dev: true
 
+  /core-util-is@1.0.3:
+    resolution: {integrity: sha512-ZQBvi1DcpJ4GDqanjucZ2Hj3wEO5pZDS89BWbkcrvdxksJorwUDDZamX9ldFkp9aw2lmBDLgkObEA4DWNJ9FYQ==}
+    dev: true
+
   /create-require@1.1.1:
     resolution: {integrity: sha512-dcKFX3jn0MpIaXjisoRvexIJVEKzaq7z2rZKxf+MSr9TkdmHmsU4m2lcLojrj/FHl8mk5VxMmYA+ftRkP/3oKQ==}
     dev: true
@@ -5145,8 +5149,8 @@ packages:
       jake: 10.8.5
     dev: true
 
-  /electron-to-chromium@1.4.350:
-    resolution: {integrity: sha512-XnXcWpVnOfHZ4C3NPiL+SubeoGV8zc/pg8GEubRtc1dPA/9jKS2vsOPmtClJHhWxUb2RSGC1OBLCbgNUJMtZPw==}
+  /electron-to-chromium@1.4.352:
+    resolution: {integrity: sha512-ikFUEyu5/q+wJpMOxWxTaEVk2M1qKqTGKKyfJmod1CPZxKfYnxVS41/GCBQg21ItBpZybyN8sNpRqCUGm+Zc4Q==}
     dev: true
 
   /elementtree@0.1.7:
@@ -9045,7 +9049,7 @@ packages:
   /readable-stream@1.1.14:
     resolution: {integrity: sha512-+MeVjFf4L44XUkhM1eYbD8fyEsxcV81pqMSR5gblfcLCHfZvbrqy4/qYHE+/R5HoBUT11WV5O08Cr1n3YXkWVQ==}
     dependencies:
-      core-util-is: 1.0.2
+      core-util-is: 1.0.3
       inherits: 2.0.4
       isarray: 0.0.1
       string_decoder: 0.10.31
@@ -9054,7 +9058,7 @@ packages:
   /readable-stream@2.3.8:
     resolution: {integrity: sha512-8p0AUk4XODgIewSi0l8Epjs+EVnWiK7NoDIEGU0HhE7+ZyY8D1IMY7odu5lRrFXGg71L15KG8QrPmum45RTtdA==}
     dependencies:
-      core-util-is: 1.0.2
+      core-util-is: 1.0.3
       inherits: 2.0.4
       isarray: 1.0.0
       process-nextick-args: 2.0.1
