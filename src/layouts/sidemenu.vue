@@ -7,6 +7,8 @@ import {
   bookmarkSharp,
   heartOutline,
   heartSharp,
+  logOutOutline,
+
   mailOutline,
   mailSharp,
   paperPlaneOutline,
@@ -63,15 +65,28 @@ const selected = useRouteQuery('page', 'Inbox')
 // const path = window.location.pathname.split('menu/')[1]
 // if (path !== undefined)
 selectedIndex.value = appPages.findIndex(page => page.title.toLowerCase() === selected.value.toLowerCase())
+
+const auth = useFirebaseAuth()
+const user = useCurrentUser()
 </script>
 
 <template>
   <ion-split-pane content-id="main-content">
     <ion-menu content-id="main-content" type="overlay">
+      <ion-header class="ion-no-border">
+        <ion-toolbar>
+          <ion-title>App</ion-title>
+        </ion-toolbar>
+      </ion-header>
       <ion-content>
-        <ion-list id="inbox-list">
-          <ion-list-header>Inbox</ion-list-header>
-          <ion-note>hi@ionicframework.com</ion-note>
+        <ion-list id="inbox-list" style="padding-top: 0;">
+          <ion-list-header>
+            <ion-label>{{ auth?.currentUser?.displayName }}</ion-label>
+            <ion-button>
+              <ion-icon slot="icon-only" :icon="logOutOutline" size="small" @click="auth?.signOut()" />
+            </ion-button>
+          </ion-list-header>
+          <ion-note>{{ auth?.currentUser?.email }}</ion-note>
 
           <ion-menu-toggle v-for="(p, i) in appPages" :key="i" :auto-hide="false">
             <ion-item router-direction="root" :router-link="p.url" lines="none" :detail="false" class="hydrated" :class="{ selected: selectedIndex === i }" @click="selectedIndex = i">

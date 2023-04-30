@@ -6,15 +6,16 @@ import { router } from './router'
 import { store } from './stores'
 
 const app = createApp(App)
-  .use(store)
-  .use(router)
 
 Promise.all(
   Object.values(import.meta.glob<{ install: UserModule }>('./modules/*.ts', { eager: true }))
     .map(i => i.install?.({ app, router, store })),
 )
-  .then(() => router.isReady())
   .then(() => {
-    app.mount('#app')
+    app
+      .use(store)
+      .use(router)
+      .mount('#app')
+
     pwaElements(window)
   })
